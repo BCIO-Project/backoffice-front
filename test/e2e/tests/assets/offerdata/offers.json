@@ -1,0 +1,36 @@
+[
+    {
+        "name": "offer01",
+        "description": "description offer01 description offer01",
+        "offerurl": "http://www.google.es",
+        "headline": "headline offer01 headline offer01",
+        "goal": "1000",
+        "subtitle": "subtitle offer01 subtitle offer01",
+        "image": "image01.jpg",
+        "kickerclass": "kickerclass",
+        "kickertext": "kickertext offer01",
+        "author":"Author01",
+        "authorurl":"www.google.com/author",
+        "brandname":"brandname01",
+        "photographer":"photographer01",
+        "imagecaption":"imagecaption01",
+        "imagecopyright":"imagecopyright01"
+    },
+    {
+        "name": "offer02",
+        "description": "description offer02",
+        "offerurl": "http://www.google.es",
+        "headline": "headline offer02",
+        "goal": "1000",
+        "subtitle": "subtitle offer02",
+        "image": "image01.jpg",
+        "kickerclass": ".kickerclass",
+        "kickertext": "kickertext offer02",
+        "author":"Author02",
+        "authorurl":"www.google.com/author",
+        "brandname":"brandname02",
+        "photographer":"photographer02",
+        "imagecaption":"imagecaption01",
+        "imagecopyright":"imagecopyright02"
+    }
+]

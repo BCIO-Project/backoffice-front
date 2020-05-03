@@ -1,0 +1,65 @@
+@import '../../scss/vars';
+@import './../../scss/rem';
+
+.login{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @media screen and (max-width: $tablet-portrait-width) {
+        width: 330px;
+    }
+    @media screen and (max-width: $small-mobile-portrait-width) {
+        width: 300px;
+    }
+    .ui.button.bcio_button {
+        border-radius: 50px;
+        color: $color-primary;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: 700;
+        height: 45px;
+        width: 100%;
+        font-size: rem(15px);
+        background: $color-active-900;
+        margin: 25px 0;
+        &:hover {
+            background: rgba($color-active-900, .8);
+        }
+        @media screen and (max-width: $tablet-portrait-width) {
+            &:active {
+                background: darken($color: $color-active-900, $amount: 20)
+            }
+        }
+    }
+    .login_instructions {
+        margin: 55px 0;
+    }
+    img {
+        height: 60px;
+    }
+    .login_form{
+        display: flex;
+        flex-wrap: wrap;
+        & > *, .ui.input {
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: rem(20px);
+        }
+        .ui.input>input {
+            background-color: rgba($color-primary-light-500, .23);
+        }
+    }
+}
+.ui.checkbox label {
+    font-size: rem(14px);
+    font-weight: 700;
+}
+.recover_password {
+    font-size: rem(16px);
+    font-weight: 700;
+}
+

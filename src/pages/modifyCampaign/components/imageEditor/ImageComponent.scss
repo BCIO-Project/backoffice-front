@@ -1,0 +1,130 @@
+@import '../../../../scss/vars';
+.image_component{
+    .image_preview_container{
+        width: 100%;
+        position: relative;
+        min-height: 50px;
+        text-align: center;
+        border: 1px solid rgba(34,36,38,.15);
+        border-radius: .28571429rem;
+        padding-top: 2px;
+        background-color: $color-primary-medium-100;
+        .image_label{
+            cursor: pointer;
+        }
+        .image_preview{
+            border-radius: 5px;
+            max-width: 100%;
+            max-height: 200px;
+        }
+        .bcio_icon{
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid $color-primary-light-300;
+            padding: .9rem;
+            right: 5px;
+            bottom: 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            i.icon{
+                margin: 0;
+                font-size: 1.2rem;
+            }
+            &.download{
+                right: 4rem;
+            }
+            &.hide{
+                display: none;
+            }
+        }
+        @media only screen and (max-width: $tablet-portrait-width){
+            min-height: 10px;
+        }
+    }
+    .hide{
+        display: none;
+    }
+    @media only screen and (max-width: $tablet-portrait-width){
+        margin-top: 25px;
+    }
+}
+.modal_image_component_header{
+    padding: 10px !important;
+    text-align: right;
+    i{
+        font-size: 1.2rem;
+        color: $color-primary-medium-500;
+        cursor: pointer;
+    }
+}
+.modal_image_component_content{
+    display: flex !important;
+    position: relative;
+    align-content: flex-start;
+    padding: 0 25px !important;
+    height: 100%;
+    .bcio.errorMessage{
+        position: absolute;
+        z-index: 3;
+        background: rgba(250, 250, 250, .8);
+        width: 50%;
+        opacity: 1;
+        transition: opacity .3s ease-in-out;
+        &.hide{
+            opacity: 0;
+        }
+    }
+
+    .content_cropper{
+        width: 70%;
+        position: relative;
+        height: 100%;
+    }
+    .content_sizes{
+        width: 30%;
+        height: 100%;
+        overflow-y: scroll;
+        background: $color-primary-light-100;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .slot_image{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            background: $color-primary;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .slot_description{
+            flex: 1;
+            padding: 3px 8px;
+        }
+        .slot_name, .slot_size{
+            margin: 0;
+            line-height: 1.2;
+            text-align: right;
+            font-size: .7rem;
+            text-transform: uppercase;
+        }
+        .slot_name{
+            font-weight: 900;
+        }
+        .slot_size{
+            font-weight: 100;
+        }
+        img{
+            max-width: 100%;
+        }
+        &::-webkit-scrollbar:vertical{
+            width: 4px;
+        }
+    }
+}
+.hide{
+    display: none;
+}

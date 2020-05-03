@@ -1,0 +1,91 @@
+.ui.button.bcio_button, .bcio_status {
+    border-radius: 30px;
+    font-weight: 700;
+    height: 40px;
+    width: 87px;
+    padding: 0 17px;
+    font-size: 13px;
+}
+.ui.button.bcio_button{
+    text-transform: lowercase;
+    background-color: $color-primary;
+    border: 1px solid $color-active-100;
+    color: $color-active-900;
+    margin-right: 5px;
+}
+.bcio_status{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin-right: 0;
+    margin-left: 10px;
+    padding: 0 12px;
+    border: none;
+    &.live{
+        background-color: $color-active-900;
+        color: $color-primary;
+        justify-content: flex-end;
+        position: relative;
+        #status-icon{
+            position: absolute;
+            left: 5px;
+            color: $color-primary-dark-900;
+        }
+        &.default {
+            justify-content: center;
+        }
+    }
+    &.paused{
+        background-color: $color-primary-dark-900;
+        color: $color-primary;
+        justify-content: space-between;
+        #status-icon{
+            order: 1;
+            margin-left: 10px;
+            color: $color-active-900;
+        }
+    }
+    &.scheduled{
+        background-color: $color-primary-light-900;
+        color: $color-primary;
+        justify-content: flex-end;
+        position: relative;
+        #status-icon{
+            position: absolute;
+            left: 5px;
+            color: $color-primary-dark-900;
+        }
+    }
+    &.draft{
+        background-color: $color-primary-medium-300;
+        color: $color-primary-light-900;
+    }
+    &.b-closed{
+        background-color: $color-primary-dark-900;
+        color: $color-primary-light-900;
+    }
+}
+#status-icon{
+    cursor: pointer;
+    font-size: 2.4em;
+}
+.toggle_bcg {
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    margin: 0;
+    position: absolute;
+    transform: translate(5px, -25px);
+    z-index: -5;
+}
+.hidden {
+    display: none;
+}
+#hidden-icon {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}

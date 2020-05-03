@@ -1,0 +1,19 @@
+runtime: custom
+env: flex
+
+service: default
+
+env_variables:
+  ENVIRONMENT: 'dev'
+  REACT_APP_API_BASE: 'https://bcio-dev.appspot.com/api'
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 3
+  cool_down_period_sec: 180
+  cpu_utilization:
+    target_utilization: 0.8
+
+resources:
+  cpu: 2
+  memory_gb: 4

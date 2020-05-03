@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormCampaign> Should render correctly 1`] = `
+<div
+  className="form-container"
+>
+  <form
+    className="ui form"
+    id="create-campaign"
+    onSubmit={[Function]}
+  >
+    <div
+      className="equal width fields"
+    >
+      <div
+        className="field required"
+      >
+        <i
+          aria-hidden="true"
+          className="asterisk icon required-note"
+          onClick={[Function]}
+        />
+        <select
+          className="bcio"
+          id="page"
+          name="page"
+          onChange={[Function]}
+          required={true}
+        >
+          <option
+            value=""
+          >
+            Select Page
+          </option>
+        </select>
+      </div>
+      <div
+        className="field required position"
+      >
+        <i
+          aria-hidden="true"
+          className="asterisk icon required-note"
+          onClick={[Function]}
+        />
+        <select
+          className="bcio"
+          id="position"
+          name="position"
+          onChange={[Function]}
+          required={true}
+        >
+          <option
+            value=""
+          >
+            Select Position
+          </option>
+        </select>
+      </div>
+      <div
+        className="field required"
+      >
+        <div
+          className="required field bcio"
+        >
+          <div
+            className="ui fluid icon input"
+            field="name"
+          >
+            <input
+              id="name"
+              name="name"
+              onChange={[Function]}
+              placeholder="Campaign Title"
+              required={true}
+              type="text"
+            />
+            <i
+              aria-hidden="true"
+              className="asterisk icon"
+              onClick={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            className=""
+            disabled={false}
+            name="startDate"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            readOnly={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="field"
+      >
+        <div
+          className="ui fluid icon input"
+          field="startDate"
+        >
+          <input
+            onChange={[Function]}
+            onClick={[Function]}
+            placeholder="00/00/0000"
+            type="text"
+            value=""
+          />
+          <i
+            aria-hidden="true"
+            className="calendar outline icon"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            className=""
+            disabled={false}
+            name="endDate"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            readOnly={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="field"
+      >
+        <div
+          className="ui fluid icon input"
+          field="endDate"
+        >
+          <input
+            onChange={[Function]}
+            onClick={[Function]}
+            placeholder="00/00/0000"
+            type="text"
+            value=""
+          />
+          <i
+            aria-hidden="true"
+            className="calendar outline icon"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="bcio-label to"
+    />
+  </form>
+  <p
+    className="form-note"
+  >
+    <i
+      aria-hidden="true"
+      className="asterisk icon"
+      onClick={[Function]}
+    />
+    Required to launch
+  </p>
+  <div
+    className="ui message hidden"
+  >
+    <i
+      aria-hidden="true"
+      className="warning sign icon"
+      onClick={[Function]}
+    />
+    Something went wrong, please try to reload the page or contact your administrator
+    
+  </div>
+</div>
+`;

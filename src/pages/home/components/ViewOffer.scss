@@ -1,0 +1,246 @@
+@import '../../../scss/vars';
+@import '../../../scss/rem';
+
+.offer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $color-primary-medium-300;
+    position: relative;
+    @media screen and (max-width: $tablet-portrait-width){
+        flex-direction: column;
+    }
+}
+.offer_info_container {
+    width: 100%;
+    background-color: $color-primary;
+    padding: 20px 15px 20px 15px;
+    display: flex;
+    flex-direction: row;
+    .hide {
+        display: none;
+    }
+    .offer_image {
+        border: 1px solid #eaeaea;
+        border-radius: 7px;
+        min-width: 118px;
+        height: 100%;
+        margin-right: 18px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        @media screen and (max-width: $tablet-portrait-width){
+            height: 85px;
+        }
+    }
+    .offer_default {
+        position: absolute;
+        bottom: -8px;
+        right: -8px;
+        color: $color-primary;
+        background-color: $color-primary-dark-900;
+        height: 25px;
+        width: 25px;
+        border: 2px solid $color-primary;
+        border-radius: 50%;
+        text-align: center;
+        i.icon {
+            margin-right: 0;
+        }
+    }
+}
+.offer_content {
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: $tablet-portrait-width){
+        width: 60%;
+        overflow-wrap: break-word;
+    }
+    @media screen and (max-width: $small-mobile-portrait-width){
+        width: 50%;
+    }
+    h3, h4, p {
+        margin-bottom: 2px;
+        margin-top: 0;
+    }
+    .offer_content_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 85%;
+        @media screen and (max-width: $tablet-portrait-width){
+            max-width: 100%;
+        }
+    }
+    .offer_title {
+        text-transform: uppercase;
+        font-size: rem(15px);
+    }
+    .offer_subtitle {
+        font-size: rem(15px);
+    }
+    .offer_url {
+        color: $color-primary-dark-300;
+        font-size: rem(13px);
+    }
+    .offer_icon_group{
+        font-style: normal;
+        position: relative;
+        .ui.basic.label {
+            display: none;
+        }
+        &.draft:hover{
+            .ui.basic.label {
+                display: block;
+                padding: 15px 10px;
+                position: absolute;
+                width: 230px;
+                left: -88px;
+                top: 7px;
+            }
+        }
+    }
+    .button.ui {
+        color: $color-primary-dark-900;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: $color-primary;
+        border: 1px solid $color-primary-light-300;
+        padding: 5px 2px 5px 5px;
+        align-self: center;
+        margin-right: 0;
+        i.icon, i.icons {
+            font-size: rem(19px);
+            margin-right: 0;
+        }
+        &.bcio_button_edit{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            color: $color-active-900;
+            background-color: $color-primary;
+            .icon.pencil {
+                transform: translate(8px, 0);
+            }
+            .icon.eye {
+                transform: translate(5px, 0);
+                color: $color-primary-dark-500;
+            }
+            .corner.icon {
+                top: -16px;
+                right: -25px;
+            }
+            .warning {
+                color: $color-error-900;
+            }
+            .check {
+                color: $color-success-900;
+            }
+            @media screen and (max-width: $tablet-portrait-width){
+                position: absolute;
+                bottom: 29px;
+                right: 125px;
+            }
+        }
+    }
+}
+.offer_status_container {
+    min-width: 448px;
+    background-color: rgba($color-active-100, .12);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .left {
+        font-weight: 700;
+        font-size: rem(14px);
+        text-transform: uppercase;
+        padding: 20px 35px;
+        width: 310px;
+        .offer_progress {
+            display: flex;
+            justify-content: space-between;
+            .progress_bar {
+                width: 60%;
+            }
+        }
+        .ui.progress {
+            margin: 0 0 15px 0;
+            border-radius: 60px;
+        }
+        .ui.progress .bar {
+            height: 10px;
+            border-radius: 60px;
+        }
+        .offer_status_info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: rem(12px);
+            p {
+                margin-bottom: 0;
+            }
+            div p:first-child {
+                color: $color-active-500;
+            }
+            @media screen and (max-width: $tablet-portrait-width){
+                display: none;
+            }
+        }
+        @media screen and (max-width: $tablet-portrait-width){
+            padding-left: 15px;
+            padding-right: 60px;
+            font-size: rem(12px);
+            max-width: 240px;
+        }
+        @media screen and (max-width: $small-mobile-portrait-width){
+            &.progress_closed {
+                max-width: 190px;
+            }
+        }
+    }
+    @media screen and (max-width: $tablet-portrait-width){
+        min-width: initial;
+        width: 100%;
+        justify-content: space-between;
+        .bcio_status {
+            margin-bottom: 6px;
+            margin-right: 10px;
+        }
+    }
+}
+.ui.progress {
+    &.low {
+        background-color: $color-error-400;
+        border: 1px dashed $color-error-900;
+        .bar {
+            background: $color-error-900;
+        }
+    }
+    &.medium {
+        background-color: $color-warning-400;
+        border: 1px dashed $color-warning-900;
+        .bar {
+            background: $color-warning-900;
+        }
+    }
+    &.high {
+        background-color: $color-success-400;
+        border: 1px dashed $color-success-900;
+        .bar {
+            background: $color-success-900;
+        }
+    }
+}
+.bcio.ui.message.offer{
+    position: fixed;
+    justify-content: flex-start;
+    top: 10px;
+    width: 85%;
+    text-align: left;
+    max-width: 1530px;
+    margin: 0 auto;
+}

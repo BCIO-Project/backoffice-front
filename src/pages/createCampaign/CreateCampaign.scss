@@ -1,0 +1,167 @@
+@import './../../scss/rem';
+@import './../../scss/vars';
+.create-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: $color-primary-light-100;
+    .content-wr {
+        width: 90%;
+        max-width: 1440px;
+        margin: 0 auto;
+        .error {
+            width: 100%;
+        }
+        .bcio.ui.message {
+            max-width: 1440px;
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+    }
+    .button.ui {
+        width: 100px;
+        height: 40px;
+        color: $color-primary;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: rem(13px);
+        margin-right: 10px;
+        &.btn-exit {
+            background: $color-error-900;
+        }
+        &.btn-save {
+            background: $color-active-900;
+        }
+        .icon {
+            font-size: rem(20px);
+            position: relative;
+            top: 2px; 
+        }
+    }
+    .react-datepicker-popper {
+        @media screen and (max-width: $tablet-portrait-width) {
+            z-index: 5;
+        }
+    }
+    .actions {
+        @media screen and (max-width: $tablet-portrait-width) {
+            .ui.button:first-child {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+.ui.basic.label {
+    background: $color-error-900;
+    color: $color-primary;
+    &.warning {
+        border: 1px solid $color-warning-900;
+        color: $color-warning-900;
+        background: $color-primary;
+    }
+}
+.bcio {
+    font-weight: 700;
+    .ui.fluid, .ui.fluid input {
+        min-width: 170px;
+        background-color: $color-primary-medium-100;
+        ::placeholder {
+            color: $color-primary-light-900;
+            font-weight: 700;
+        }
+    }
+    .ui.icon.input > i.icon{
+        font-size: rem(15px);
+    }
+}
+.bcio-label {
+    position: absolute;
+    right: 0;
+    top: 38px;
+    @media screen and (max-width: $tablet-portrait-width) {
+        &.to {
+            bottom: -26px;
+            left: 0;
+            top: auto;
+        }
+    }
+}
+.ui.basic.label {
+    p {
+        margin-bottom: 0;
+    }
+}
+#create-campaign {
+    &.ui.form .fields {
+        @media screen and (max-width: $tablet-portrait-width) {
+            display: grid;
+        }
+    }
+}
+.ui.form select{
+    height: 38px;
+    background-color: $color-primary-medium-100;
+    font-family: Lato,'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: $color-primary-light-900;
+    &:focus {
+        outline: 1px solid $color-active-300;
+    }
+}
+.form-container {
+    position: relative;
+    padding: 25px;
+    height: 170px;
+    width: 100%;
+    border-radius: 7px;
+    background-color: $color-primary;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12), 0 1px 3px 0 rgba(0, 0, 0, .2);
+    @media screen and (max-width: $tablet-portrait-width) {
+        border: none;
+        height: auto;
+        padding: 1.5rem;
+        padding-bottom: .5rem;
+        max-height: 400px;
+    }
+    &::-webkit-scrollbar:vertical{
+        width: 0;
+    }
+}
+.form-note {
+    position: absolute;
+    width: 96%;
+    bottom: 22px;
+    font-weight: 700;
+    font-size: rem(14px);
+    color: $color-primary-dark-900;
+    border-top: 1px solid $color-primary-light-300;
+    padding-top: 20px;
+    @media screen and (max-width: $tablet-portrait-width) {
+        position: static;
+        width: 100%;
+        bottom: 5px;
+        margin-bottom: 15px !important;
+    }
+    .icon {
+        font-size: rem(13px);
+        margin-right: 10px;
+    }
+}
+.required {
+    position: relative;
+    .required-note {
+        font-size: rem(15px);
+        position: absolute;
+        margin: 0;
+        right: 28px;
+        top: 9px;
+    }
+}
+.hidden {
+    display: none !important;
+}
+
+

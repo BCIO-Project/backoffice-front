@@ -1,0 +1,246 @@
+@import '../../../scss/vars';
+@import '../../../scss/rem';
+.offer_component{
+    background: $color-primary;
+    width: 100%;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12), 0 1px 3px 0 rgba(0, 0, 0, .2);
+    margin-bottom: 4rem;
+    border-radius: 0 0 7px 7px;
+    @media only screen and (max-width: $tablet-portrait-width){
+        &.offer_row {
+            margin-bottom: 1px;
+        }
+        ::-webkit-scrollbar:vertical{
+            width: 0;
+        }
+    }
+    .offer_form_component_actions{
+        display: flex;
+        padding: .2rem;
+        align-items: flex-end;
+        .ui.button.bcio_button{
+            width: 95px;
+            margin-left: 10px;
+            @media only screen and (max-width: $tablet-portrait-width){
+                width: inherit;
+                margin: 0;
+                border-radius: 0;
+                border: none;
+                border-top: 1px solid $color-active-100; 
+                &:last-child{
+                    border-left: 1px solid $color-active-100;
+                }
+            }
+        }
+        .ui.button.hidden{
+            display: none;
+        }
+        @media only screen and (max-width: $tablet-portrait-width){
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            left: .3px;
+            padding-left: 0;
+        }
+    }
+    .default_offer{
+        display: none;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+    .icon.lock{
+        font-size: 1.3rem;
+        z-index: 5;
+        position: relative;
+        &.default{
+            color: $color-primary;
+        }
+    }
+    .actions_container {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        @media only screen and (max-width: $tablet-portrait-width){
+            position: static;
+        }
+    }
+    .default_container {
+        cursor: pointer;
+        position: absolute;
+        top: 39px;
+        left: 0;
+        @media only screen and (max-width: $tablet-portrait-width){
+            position: relative;
+            top: initial;
+            bottom: 30px;
+        }
+    }
+    .default_bcg {
+        width: 32px;
+        height: 32px;
+        background-color: $color-active-900;
+        position: absolute;
+        border-radius: 50%;
+        top: -5px;
+        left: -5px;
+        &.grey{
+            background-color: $color-primary-light-100;
+        }
+    }
+}
+.offer_component_header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    min-height: 40px;
+    border-bottom: .5px solid;
+    padding: 10px 20px 0 20px;
+    .offer_component_title{
+        text-transform: uppercase;
+        vertical-align: middle;
+        margin-bottom: 0;
+        line-height: 2;
+    }
+    .offer_component_accordion_button{
+        .icon{
+            font-size: 1.2rem;
+            color: $color-primary-dark-900;
+        }
+    }
+    @media only screen and (min-width: $tablet-portrait-width){
+        display: none;
+    }
+}
+.offer_component_content{
+    height: 0;
+    transition: height .5s ease;
+    &.open{
+        height: auto;
+    }
+    @media only screen and (min-width: $tablet-portrait-width){
+        height: auto;
+    }
+    .offer_colors {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $tablet-portrait-width){
+            margin-bottom: 60px;
+            order: 2;
+        }
+    }
+    .popover {
+        input {
+            max-width: 87px !important;
+            height: 11px !important;
+        }
+    }
+}
+.offer_component_content {
+    @media only screen and (max-width: $tablet-portrait-width){
+        transition: all 0.4s ease;
+        height: 0;
+        overflow-y: scroll;
+        &.open {
+            height: 1470px;
+        }
+    }
+}
+.documentation {
+    @media only screen and (max-width: $tablet-portrait-width){
+        margin-bottom: 20px;
+    }
+}
+.offer_component_title{
+    @media only screen and (max-width: $tablet-portrait-width){
+        width: 80%;
+    }
+}
+.offer_form.ui.form{
+    padding: 0 1rem 3rem 1rem;
+    .offer_form_columns{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: .7rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, minmax(75px, auto));
+        border-top: 1px solid $color-primary-medium-100;
+        margin-top: 15px;
+        &.one {
+            grid-template-rows: repeat(1, minmax(75px, auto));
+        }
+        &.two {
+            grid-template-rows: repeat(2, minmax(75px, auto));
+            border: none;
+            @media only screen and (max-width: $tablet-portrait-width){
+                display: flex;
+            }
+        }
+        @media only screen and (max-width: $tablet-portrait-width){
+            display: flex;
+            flex-direction: column;
+        }
+        .offer_component_title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .offer_form_offer_url{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .offer_form_offer_description{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            textarea {
+                line-height: 1;
+                resize: none;
+            }
+        }
+        .headline, .subtitle { 
+            grid-column-start: 1;
+            grid-column-end: 4;
+            textarea {
+                line-height: 1;
+                resize: none;
+            }
+        }
+        .image { 
+            grid-column-start: 2;
+            grid-row-start: 4;
+            grid-row-end: 7;
+        }
+        .copyright {
+            grid-column-start: 3;
+        }
+    }
+    & > * .ui{
+        display: block;
+        width: 100%;
+        margin: 0;
+        &.header{
+            padding: 1rem 0 .5rem .1rem;
+            color: $color-primary-light-900;
+            font-weight: 700;
+            font-size: rem(12px);
+        }
+    }
+    .ui.label {
+        display: inline-block;
+        width: auto;
+        margin: 2px;
+        font-size: 13px;
+    }
+    & > * input,  textarea, .dropdown {
+        background-color: $color-primary-medium-100;
+        margin-right: 15px;
+        ::placeholder {
+            color: $color-primary-light-900;
+            font-weight: 700;
+        }
+    }
+}
+fieldset {
+    padding: 0;
+    border: none;
+}

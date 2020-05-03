@@ -1,0 +1,38 @@
+@import './../../scss/rem';
+@import './../../scss/vars';
+
+.react-datepicker__input-container {
+    visibility: hidden;
+    position: absolute;
+    @media only screen and (max-width: $tablet-portrait-width){
+        width: 0;
+    }
+
+}
+.react-datepicker-popper {
+    @media only screen and (max-width: $tablet-portrait-width){
+            margin-top: 35px;
+            width: 300px;
+            transform: scale(.9)
+    }
+}
+.react-datepicker-popper[data-placement^="bottom"] {
+    @media only screen and (max-width: $tablet-portrait-width){
+        margin-top: 30px;
+    }
+}
+.ui.icon.input>i.icon {
+    opacity: 1;
+    font-size: rem(20px);
+    width: rem(45px);
+}
+.ui.form .icon input {
+    background: $color-primary-medium-100;
+    &::placeholder {
+        font-weight: 700;
+        color: $color-primary-light-900;
+    }
+    &:focus {
+        outline: 1px solid $color-active-300;
+    }
+}

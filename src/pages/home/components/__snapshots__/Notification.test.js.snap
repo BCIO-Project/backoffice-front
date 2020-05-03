@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification> Should render correctly 1`] = `
+<div
+  className="notification_info"
+>
+  <div
+    className="campaign_category"
+  >
+    <p
+      className="campaign_category_text"
+    >
+      undefined / undefined
+    </p>
+    <div>
+      <div
+        className="ui checkbox"
+        onChange={[Function]}
+        onClick={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+      >
+        <input
+          checked={false}
+          className="hidden"
+          readOnly={true}
+          tabIndex={0}
+          type="checkbox"
+        />
+        <label>
+          Read
+        </label>
+      </div>
+      <button
+        className="notifications_erase"
+        onClick={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="close icon"
+          onClick={[Function]}
+        />
+      </button>
+    </div>
+  </div>
+  <p
+    className="notifications_text"
+  />
+</div>
+`;

@@ -1,0 +1,302 @@
+@import '../../../scss/vars';
+@import '../../../scss/rem';
+.home_page_sidebar{
+    .center {
+        justify-content: center;
+        text-align: center;
+    }
+    .sidebar_min_logo{
+        transform: scale(1);
+        height: 60px;
+        transition: all .3s ease;
+        padding-top: 2rem;
+    }
+    .sidebar_max_logo{
+        height: 0;
+        transition: all .3s ease;
+    }
+    .sidebar_logo{
+        padding-bottom: 2rem;
+        position: relative;
+    }
+    .sidebar_max_logo_black {
+        display: none;
+    }
+    &.notifications {
+        max-height: 100vh;
+        overflow-y: scroll;
+        &::-webkit-scrollbar:vertical{
+            width: 3px;
+        }
+        @media screen and (max-width: $tablet-portrait-width){
+            transform: translate(280px, 0px);
+            z-index: 20;
+            .sidebar_logo, .sidebar_menu {
+                display: none;
+            }
+        }
+        .sidebar_max_logo {
+            display: none;
+        }
+        .sidebar_max_logo_black {
+            display: inline-block;
+        }
+        .campaign_category {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .campaign_category_text {
+            margin: 0;
+            min-width: 170px;
+            width: auto;
+        }
+        .notifications_text {
+            font-size: rem(14px);
+        }
+        .notification_info {
+            border-bottom: 1px solid $color-primary-light-100;
+            padding: 10px 0 20px 0;
+        }
+        .item.sidebar_menu_item {
+            &:hover {
+                background-color: darken($color: $color-active-900, $amount: 5);
+                opacity: .8;
+            }
+        }
+        .ui.checkbox {
+            margin: 0;
+            transform: scale(.9);
+        }
+        .notifications_erase {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .ui.menu .item:before {
+            width: 0;
+        }
+    }
+    .sidebar_menu{
+        align-self: center;
+        margin: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        .item.sidebar_menu_item{
+            padding: 0;
+            margin-bottom: 50px;
+            height: 50px;
+            width: 50px;
+            align-self: center;
+            border-radius: 50px;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background: $color-active-900;
+            transition: width .3s ease;
+            &:hover {
+                background-color: darken($color: $color-active-900, $amount: 5);
+                opacity: .8;
+            }
+            .sidebar_menu_item_title{
+                display: none;
+            }
+            i.icon{
+                font-size: 1.7rem;
+                color: $color-primary;
+                margin: 0 0 1px 0;
+            }
+        }
+    }
+    &.open{
+        .sidebar_min_logo{
+            height: 0;
+        }
+        .sidebar_max_logo{
+            transform: scale(1);
+            height: auto;
+        }
+        .sidebar_menu{
+            .item.sidebar_menu_item{
+                width: 100px;
+                .sidebar_menu_item_title{
+                    display: block;
+                    color: $color-primary;
+                    margin-left: .5rem;
+                }
+                i.icon{
+                    font-size: 1.7rem;
+                    color: $color-primary;
+                    margin-bottom: 1px;
+                }
+                &:hover {
+                    opacity: .8;
+                    background-color: $color-active-900;
+                }
+            }
+        }
+        i.icon.outline {
+            color: $color-primary;
+            font-size: rem(22px);
+            margin: 9px 0 0;
+        }
+        &.notifications {
+            .notifications_bcg {
+                &:hover {
+                    background-color: $color-active-900;
+                    cursor: initial;
+                }
+            }
+            @media screen and (max-width: $tablet-portrait-width){
+                width: 280px;
+                padding: 0 10px 0 15px;
+                z-index: 25;
+            }
+            .sidebar_calendar_link {
+                color: $color-primary-dark-900;
+                border-top: 1px solid $color-primary-light-700;
+                .calendar {
+                    background-color: $color-active-900;
+                    &:hover {
+                        background-color: darken($color: $color-active-900, $amount: 5);
+                        opacity: .8;
+                    }
+                }
+                i.icon.outline {
+                    color: $color-primary;
+                }
+            }
+        }
+        .sidebar_calendar_link {
+            border-top: 1px solid #3D4754;;
+            width: 82%;
+            justify-content: flex-start;
+            .calendar {
+                background-color: $color-primary;
+                &:hover {
+                    background-color: darken($color: $color-primary, $amount: 5);
+                    opacity: .8;
+                }
+            }
+            i.icon.outline {
+                margin-right: 8px;
+                margin-top: 0;
+                color: $color-active-900;
+                font-size: 22px;
+                padding-top: 10px;
+            }
+        }
+    }
+    .sidebar_filters {
+        color: $color-primary-dark-500;
+    }
+    .sidebar_title {
+        border-bottom: 1px solid #3D4754;
+        padding-bottom: 5px;
+        font-size: rem(16px);
+        font-weight: 700;
+        color: $color-primary-light-900;
+        margin-right: 8px;
+        &.notifications {
+            font-size: rem(20px);
+        }
+    }
+    .sidebar_filter_status {
+        display: flex;
+        flex-direction: column;
+    }
+    .ui.checkbox {
+        margin: 8px 0;
+        &.checked{
+            label{
+                color: $color-active-900;
+            }
+        }
+        & label{
+            text-transform: capitalize;
+            color: $color-primary-dark-500;
+            font-weight: 700;
+            font-size: rem(16px);
+        }
+    }
+    .ui.checkbox input[type=checkbox] {
+        height: 20px;
+        width: 20px;
+    }
+}
+.mobile {
+    .sidebar_logo{
+        display: none;
+        padding: 2rem 0;
+    }
+    .sidebar_menu{
+        display: none;
+    }
+}
+.notifications_unread {
+    position: absolute;
+    padding-top: 2px;
+    color: $color-primary;
+    font-weight: 700;
+    border-radius: 50%;
+    right: 0;
+    top: -5px;
+    height: 20px;
+    width: 20px;
+    background-color: $color-error-900;
+}
+.sidebar_notifications {
+    position: relative;
+    i.icon.chevron {
+        color: $color-active-900;
+        cursor: pointer;
+        font-size: rem(26px);
+        position: absolute;
+        left: -28px;
+        top: 1px;
+        &:hover {
+            opacity: .8;
+        }
+        @media screen and (max-width: $tablet-portrait-width){
+            display: none;
+        }
+    }
+}
+.sidebar_calendar_link {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    padding: 19px 0;
+    color: $color-primary;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    .calendar {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: $color-active-900;
+        color: $color-primary;
+        font-size: 22px;
+        padding-top: 10px;
+        &:hover {
+            background-color: darken($color: $color-active-900, $amount: 5);
+            opacity: .8;
+        }
+    }
+    &.calendar_disabled {
+        cursor: auto;
+        .calendar {
+            background-color: $color-primary-dark-700;
+            color: $color-primary-dark-900;
+        }
+    }
+}
